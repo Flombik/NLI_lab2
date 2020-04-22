@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Расстояние Левенштейна</title>
+    <style media='print' type='text/css'>
+        #navbar-iframe {
+            display: none;
+            height: 0px;
+            visibility: hidden;
+        }
+
+        .noprint {
+            display: none;
+        }
+
+        body {
+            background: #FFF;
+            color: #000;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #00F;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="noprint">
+        {% include 'navigation.html' %}
+    </span>
+    <h3>Редакционные расстояния для слова "{{word}}"</h3>
+    <ul>
+        {% for key, value in words.items() %}
+        <li>{{ key }} - {{ words[key] }}</li>
+        {% endfor %}
+    </ul>
+
+    <input type="button" value="Печать" onclick="print()" class="noprint" />
+</body>
+
+</html>
